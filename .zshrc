@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export LAMBDA_MOD_N_DIR_LEVELS=10
 # Path to your oh-my-zsh installation.
 export ZSH="/home/harish/.oh-my-zsh"
 
