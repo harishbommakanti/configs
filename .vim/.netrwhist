@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/u/harishb/public_html'
+let g:netrw_dirhist_2='/u/harishb/.vim'
+let g:netrw_dirhist_3='/u/harishb/CS429/preCS429_prep/LL'
+let g:netrw_dirhist_4='/u/harishb/cs429/projects/proj1/linux_bootcamp_handout'
+let g:netrw_dirhist_5='/u/harishb/cs429/projects/proj1/.git/branches'
+let g:netrw_dirhist_6='/u/harishb/mail'
+let g:netrw_dirhist_7='/u/harishb/.ssh'
