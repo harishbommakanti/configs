@@ -1,15 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export LAMBDA_MOD_N_DIR_LEVELS=10
 # Path to your oh-my-zsh installation.
-export ZSH="/home/harish/.oh-my-zsh"
+export ZSH="/home/harishb/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="lambda-mod"
+ZSH_THEME="frontcube"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -46,12 +45,14 @@ ZSH_THEME="lambda-mod"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -80,6 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export EDITOR='vim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -97,17 +99,41 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh
-export JAVA_HOME="/mnt/c/Program Files/Java/jdk-14.0.2"
-export PATH=$JAVA_HOME/bin:$PATH
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# aliases
-export utssh_keydir="/mnt/c/Users/Harish/.ssh/utcs_rsa"
-export utssh_idhost="harishb@vyasa.cs.utexas.edu"
-alias utssh="sudo ssh -i $utssh_keydir $utssh_idhost"
-alias utsftp="sudo sftp -i $utssh_keydir $utssh_idhost"
+# UTCS ssh stuff
+export utssh_keydir="/home/harishb/.ssh/id_rsa"
+utssh_idhost () {
+	echo "harishb@$1.cs.utexas.edu"
+}
 
-# conda
-# export PATH=/mnt/c/Users/Harish/anaconda3/bin:$PATH:wq
-# source /mnt/c/Users/Harish/anaconda3/etc/profile.d/conda.sh
-alias conda="conda.exe"
+utssh () {
+	# sudo ssh -i $utssh_keydir $(utssh_idhost $1)
+	ssh $(utssh_idhost $1)
+}
+
+utsftp () {
+	# sudo sftp -i $utssh_keydir $(utssh_idhost $1)
+	sftp $(utssh_idhost $1)
+}
+
+# enabling webcam for oracle virtual box
+alias vbox_enable_webcam="VBoxManage controlvm \"UT_Windows10\" webcam attach /dev/video0"
+
+
+alias untar="tar xvzf"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/harishb/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/harishb/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/harishb/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/harishb/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

@@ -1,0 +1,116 @@
+{
+    "workbench.startupEditor": "none",
+
+    // character line count bar
+    "editor.rulers": [
+        80
+    ],
+
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": 1.25,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+
+    // theme modifications
+    "editor.tokenColorCustomizations": {
+        "[Default Dark+]": {
+            // basically white variables
+            "variables": "#ffffffc0",
+
+            "comments": {
+                // italic gray comments  
+                "fontStyle": "italic",
+                "foreground": "#ffffff8e"
+            },
+
+            // blue functions that used to be 
+            // the color of the default text
+            "functions": "#9cdcfe",
+
+            // green strings that used to be
+            // the color of the default comments
+            "strings": "#6a9955",
+
+            "textMateRules": [
+                {
+                    // orange parameters
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#ff7b00cc"
+                    }
+                }
+            ]
+        },
+
+        "[One Dark Pro]": {
+            "textMateRules": [
+                {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#ff7b00cc"
+                    }   
+                }
+            ]
+        },
+        "[One Dark Pro Darker]": {
+            "textMateRules": [
+                {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#ff7b00cc"
+                    }   
+                }
+            ]
+        },
+        "[One Dark Pro Flat]": {
+            "textMateRules": [
+                {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#ff7b00cc"
+                    }   
+                }
+            ]
+        }
+    },
+
+    "oneDarkPro.markdownStyle": true,
+
+    "editor.semanticTokenColorCustomizations": {
+        "[One Dark Pro]": {
+            "enabled": true,
+            "rules": {
+                "variable": "#ffffffc0"
+            }
+        },
+        "[One Dark Pro Darker]": {
+            "enabled": true,
+            "rules": {
+                "variable": "#ffffffc0"
+            }
+        },
+        "[One Dark Pro Flat]": {
+            "enabled": true,
+            "rules": {
+                "variable": "#ffffffc0"
+            }
+        },
+    },
+
+    "workbench.colorCustomizations": {
+        // blue cursor
+        "editorCursor.foreground": "#61afef",
+    },
+
+    // cursor stuff
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "line",
+    "editor.cursorSmoothCaretAnimation": false,
+    "workbench.colorTheme": "One Dark Pro",
+}
+

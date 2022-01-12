@@ -13,6 +13,15 @@ set tabstop=3 shiftwidth=3
 " when deleting whitespace, delete 1 tab worth of space
 set smarttab
 
+" bracket completion
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap {<CR> {<CR>}<ESC>O
+" inoremap {;<CR> {<CR>};<ESC>O
+
 " indentation stuff
 set autoindent
 set smartindent
@@ -32,4 +41,4 @@ set incsearch
 set showmatch
 
 " highlight current line
-set cursorline
+" set cursorline
