@@ -116,7 +116,7 @@ utssh_idhost () {
 
 utssh () {
 	# sudo ssh -i $utssh_keydir $(utssh_idhost $1)
-	ssh -X $(utssh_idhost $1)
+	ssh -X -Y $(utssh_idhost $1)
 }
 
 utsftp () {
@@ -144,6 +144,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# julia
+export PATH="$PATH:/home/harishb/julia-1.7.2/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

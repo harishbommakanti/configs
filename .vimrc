@@ -3,7 +3,7 @@ colo desert
 syntax on
 
 " show line numbers
-set number
+" set number
 
 " replace tab with space
 set expandtab
