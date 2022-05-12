@@ -75,14 +75,17 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorStyle": "line",
     "editor.cursorSmoothCaretAnimation": false,
+
+    // git stuff
     "git.confirmSync": false,
+
+    // terminal stuff
     "terminal.integrated.inheritEnv": false,
-
-    // make terminal font match with powerlevel10k
-    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.fontFamily": "MesloLGS NF", //for p10k
     
+    // misc. workbench stuff
     "workbench.editor.enablePreview": false,
-
     "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
